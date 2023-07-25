@@ -3,8 +3,9 @@ import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./components/Home";
-import About from "./components/About";
 import Signup from "./components/Signup";
+import Login from "./components/Login";
+import Auth from "./Auth";
 
 const Stack = createStackNavigator();
 
@@ -16,9 +17,10 @@ function App() {
 initialRouteName="Home" screenOptions={{headerStyle: { backgroundColor: "#f4511e" },
 headerTintColor: "#fff",
 headerTitleStyle: { fontWeight: "bold" },}}>
-<Stack.Screen name="Home" component={Home} options={{ title: "Home Page" }} />
-<Stack.Screen name="About" component={About} options={{ title: "About Page" }} />
-<Stack.Screen name="Signup" component={Signup} options={{ title: "Signup Page" }} />
+<Stack.Screen name="Home" component={Home} options={{ title: "Home" }} />
+<Stack.Screen name="Signup" component={Signup} options={{ title: "Signup" }} />
+<Stack.Screen name="Login" component={Login} options={{ title: "Login" }} />
+
 </Stack.Navigator>
 </NavigationContainer>
     );
